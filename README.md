@@ -1,19 +1,19 @@
-# terraform-aws-vpc
+terraform-aws-vpc
 
-## Overview
+Overview
 This Terraform module provisions an AWS Virtual Private Cloud (VPC) with a configurable CIDR block.  
 It creates public and private subnets and sets up an Internet Gateway (IGW) and route tables whenever a subnet is marked as public.
 
-## Features
+Features
 - Create a VPC with a custom CIDR block and name  
 - Define multiple public and private subnets  
 - Conditionally create an Internet Gateway when public subnets exist  
 - Configure route tables for public subnets  
 
-## Usage
+Usage
 Example root configuration:
 
----
+```hcl
 provider "aws" {
   region = "us-east-1"
 }
@@ -39,4 +39,3 @@ module "vpc" {
     }
   }
 }
----
